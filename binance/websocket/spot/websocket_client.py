@@ -181,6 +181,19 @@ class SpotWebsocketClient(BinanceWebsocketClient):
             "{}@depth@{}ms".format(symbol.lower(), speed), id, callback, **kwargs
         )
 
+    def diff_book_depth_realtime(self, symbol: str, id: int, callback, **kwargs):
+        """Diff. Depth Stream
+
+        Stream Name: <symbol>@depth
+
+        Update Speed: realtime
+
+        Order book price and quantity depth updates used to locally manage an order book.
+        """
+        self.live_subscribe(
+            "{}@depth".format(symbol.lower()), id, callback, **kwargs
+        )
+
     def user_data(self, listen_key: str, id: int, callback, **kwargs):
         """Listen to user data by using the provided listen_key"""
         self.live_subscribe(listen_key, id, callback, **kwargs)

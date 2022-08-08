@@ -11,8 +11,12 @@ config_logging(logging, logging.DEBUG)
 def message_handler(message):
     print(message)
 
+key = "HUni4emxCgKGapEmyVUNn4dwQOvmcxT2dJhVBDB4QRfXeqZfjJArNNvJotVooq2t"
+secret = "EkjSgtZbVZ3pg3h5rpKMg7WQguAkX6Qq2Vqc2nLne7yoizCUtoaNTXtK14diiYOg"
+stream_url = "wss://testnet.binance.vision"
+my_client = Client(stream_url)
 
-my_client = Client()
+# my_client = Client()
 my_client.start()
 
 my_client.agg_trade(

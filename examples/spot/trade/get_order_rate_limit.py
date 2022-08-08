@@ -6,8 +6,8 @@ from binance.spot import Spot as Client
 
 config_logging(logging, logging.DEBUG)
 
-key = ""
-secret = ""
+key = "HUni4emxCgKGapEmyVUNn4dwQOvmcxT2dJhVBDB4QRfXeqZfjJArNNvJotVooq2t"
+secret = "EkjSgtZbVZ3pg3h5rpKMg7WQguAkX6Qq2Vqc2nLne7yoizCUtoaNTXtK14diiYOg"
 
 client = Client(key=key, secret=secret, base_url="https://testnet.binance.vision")
 logger = logging.getLogger(__name__)

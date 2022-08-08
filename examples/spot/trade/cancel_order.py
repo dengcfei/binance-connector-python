@@ -7,13 +7,13 @@ from binance.error import ClientError
 
 config_logging(logging, logging.DEBUG)
 
-key = ""
-secret = ""
+key = "HUni4emxCgKGapEmyVUNn4dwQOvmcxT2dJhVBDB4QRfXeqZfjJArNNvJotVooq2t"
+secret = "EkjSgtZbVZ3pg3h5rpKMg7WQguAkX6Qq2Vqc2nLne7yoizCUtoaNTXtK14diiYOg"
 
 client = Client(key, secret, base_url="https://testnet.binance.vision")
 
 try:
-    response = client.cancel_order("BTCUSDT", orderId="")
+    response = client.cancel_order("BTCUSDT", orderId="653364")
     logging.info(response)
 except ClientError as error:
     logging.error(
